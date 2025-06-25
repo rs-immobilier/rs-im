@@ -1,15 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RS-IM | RousseauService-Immobilier</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #0f2d52;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffffcc;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?modern-house,architecture') no-repeat center center;
+      background-size: cover;
+      padding: 6em 2em;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3em 1.5em;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    h2 {
+      border-left: 4px solid #0f2d52;
+      padding-left: 12px;
+      color: #0f2d52;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    footer {
+      background: #0f2d52;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.9em;
+    }
+
+    .contact p {
+      margin: 0.4em 0;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 1em;
+    }
+
+    .projets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .projet {
+      flex: 1 1 calc(50% - 20px);
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1em;
+    }
+
+    .projet img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    blockquote {
+      background: #eee;
+      padding: 1em;
+      border-left: 4px solid #0f2d52;
+      margin: 1em 0;
+      font-style: italic;
+    }
+
+    form {
+      margin-top: 2em;
+      background: #fff;
+      padding: 1.5em;
+      border: 1px solid #ccc;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #0f2d52;
+      color: white;
+      padding: 0.7em 1.5em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+      .projets {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="RS-IM logo" class="logo" />
+    <img src="assets/images/rsim-logo.png" alt="RS-IM logo" class="logo" />
     <h1>RS-IM – RousseauService-Immobilier</h1>
     <nav>
       <a href="#about">À propos</a>
@@ -19,14 +160,15 @@
   </header>
 
   <section class="hero">
-    <h2>Construisons ensemble l’espace qui vous ressemble.</h2>
+    <h1>Construisons ensemble l’espace qui vous ressemble.</h1>
     <p>Architecture sur mesure, claire, humaine et fiable.</p>
   </section>
 
   <main>
     <section id="about">
       <h2>À propos</h2>
-      <p>RS-IM est un cabinet spécialisé en architecture résidentielle...</p>
+      <p>RS-IM est un cabinet spécialisé en architecture résidentielle, dédié aux particuliers souhaitant construire, rénover ou transformer leur habitat.</p>
+      <p>Notre approche : simple, fiable, humaine. Nous croyons qu’un projet conçu dans l’écoute se construit dans la clarté, la créativité, et sans jargon technique.</p>
     </section>
 
     <section id="services">
@@ -67,7 +209,7 @@
       </blockquote>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <p><strong>Email :</strong> <a href="mailto:rousseaukris123@gmail.com">rousseaukris123@gmail.com</a></p>
       <p><strong>Téléphone :</strong> <a href="tel:+33745614880">+33 7 45 61 48 80</a></p>
@@ -76,9 +218,9 @@
     </section>
 
     <form action="https://formspree.io/f/TONCODE" method="POST">
-      <label>Nom : <input type="text" name="name" required></label><br>
-      <label>Email : <input type="email" name="email" required></label><br>
-      <label>Message : <textarea name="message" required></textarea></label><br>
+      <label>Nom : <input type="text" name="name" required></label>
+      <label>Email : <input type="email" name="email" required></label>
+      <label>Message : <textarea name="message" required></textarea></label>
       <button type="submit">Envoyer</button>
     </form>
   </main>
@@ -86,5 +228,6 @@
   <footer>
     &copy; 2025 RS-IM – RousseauService-Immobilier. Tous droits réservés.
   </footer>
+
 </body>
 </html>
